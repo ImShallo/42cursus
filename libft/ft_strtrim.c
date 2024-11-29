@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 16:29:53 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:23:07 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 15:55:17 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ static bool	ft_is_in(char c, char const *set);
 
 /*
 	DESCRIPTION
-		<<ft_strtrim>> allocates and returns a copy of <<s1>> 
-		with the characters specified in <<set>> removed 
+		<<ft_strtrim>> allocates and returns a copy of <<s1>>
+		with the characters specified in <<set>> removed
 		from the beginning and the end of the string.
 	RETURN VALUES
-		The pointer to the new  
+		The pointer to the new
 		NULL if the allocation fails.
 */
 char	*ft_strtrim(char const *s1, char const *set)

@@ -6,12 +6,11 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:10:15 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:23:47 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 18:02:01 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdint.h>
 
 /*
 	DESCRIPTION
@@ -28,7 +27,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	tmp = malloc(size * count);
 	if (count <= 0 || size <= 0)
-		return ((char *)malloc(1));
+		return (malloc(1));
 	if (!tmp)
 		return (NULL);
 	while (count--)

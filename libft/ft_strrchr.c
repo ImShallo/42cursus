@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:18:46 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:33:36 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 18:24:47 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 
-	last = NULL;
+	last = 0;
 	while (*s != '\0')
 	{
 		if (*s == c)

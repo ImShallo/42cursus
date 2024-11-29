@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:51:09 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:24:38 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 14:13:24 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 */
 void	*ft_memmove(void *dst, const void *src, size_t length)
 {
+	size_t		i;
 	const char	*ptr_src;
 	char		*ptr_dst;
-	size_t		i;
 
 	ptr_src = (char *) src;
 	ptr_dst = (char *) dst;

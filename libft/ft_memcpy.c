@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:43:19 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:38:47 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 14:13:19 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 */
 void	*ft_memcpy(void *dst, const void *src, size_t length)
 {
+	size_t		i;
 	const char	*ptr_src;
 	char		*ptr_dst;
-	size_t		i;
 
 	ptr_src = (char *) src;
 	ptr_dst = (char *) dst;

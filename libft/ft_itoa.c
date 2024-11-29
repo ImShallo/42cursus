@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 21:13:55 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:35:58 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 17:21:15 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ char	*ft_itoa(int nbr)
 {
 	char	*str;
 	int		digits;
-	short	is_negative;
+	bool	is_negative;
 
 	digits = ft_digits(nbr);
-	is_negative = 0;
+	is_negative = false;
 	if (nbr < 0)
 	{
 		str = malloc(sizeof(char) * (digits++ + 2));
-		is_negative = 1;
+		is_negative = true;
 	}
 	else
 		str = malloc(sizeof(char) * (digits + 1));

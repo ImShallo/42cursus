@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:46:35 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 10:49:18 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 18:01:40 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* 
 	DESCRIPTION
-		<<ft_bzero>> initializes <[length]> bytes of memory, 
+		<<ft_bzero>> initializes <[length]> bytes of memory
 		starting at address	<[s]>, to zero.
 	RETURN VALUES
 		None. 

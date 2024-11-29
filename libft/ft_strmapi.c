@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 20:16:22 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:28:53 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 17:19:38 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
-	str = (char *) malloc(sizeof(char) * ft_strlen((char *) s) + 1);
+	str = malloc(sizeof(char) * ft_strlen((char *) s) + 1);
 	if (!str)
 		return (NULL);
 	while (s[i])

@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:51:37 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:26:48 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 19:15:00 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*copy;
+	size_t	i;
 
-	copy = (char *) malloc(sizeof(char) * ft_strlen((char *)s1) + 1);
+	copy = malloc(sizeof(char) * ft_strlen((char *)s1) + 1);
 	if (!copy)
 		return (NULL);
-	ft_strcpy(copy, (char *)s1);
+    i = 0;
+    while (s1[i])
+    {
+        copy[i] = s1[i];
+        i++;
+    }
+    copy[i] = '\0';
 	return (copy);
 }
 

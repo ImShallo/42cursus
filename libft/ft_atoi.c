@@ -6,18 +6,18 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 10:01:08 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 10:52:24 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 17:11:29 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_space(char c);
+static int	ft_is_space(char c);
 
 /*
 	DESCRIPTION
-		<<ft_atoi>> converts the initial portion of the string pointed to by
-		<<[str]>> to int representation.
+		<<ft_atoi>> converts the initial portion of the string 
+		pointed to by <<[str]>> to int representation.
 	RETURN VALUES
 		The converted value.
 */
@@ -28,19 +28,16 @@ int	ft_atoi(char *str)
 
 	number = 0;
 	is_minus = false;
+	while (ft_is_space(*str))
+		str++;
 	while (*str)
 	{
-		if (!is_space(*str))
-		{
-			if (*str == '-')
-				is_minus = true;
-			if (ft_isdigit(*str))
-				number += *str - '0';
-			if (ft_isdigit(*(str + 1)))
-				number *= 10;
-			else
-				break ;
-		}
+		if (*str == '-')
+			is_minus = !is_minus;
+		else if (ft_isdigit(*str))
+			number = number * 10 + *str - '0';
+		else
+			break ;
 		str++;
 	}
 	if (is_minus)
@@ -48,7 +45,7 @@ int	ft_atoi(char *str)
 	return (number);
 }
 
-static int	is_space(char c)
+static int	ft_is_space(char c)
 {
 	return ((c >= 7 && c <= 13) || c == 32);
 }
@@ -102,6 +99,11 @@ int main()
 	ft_result = ft_atoi("    ");
 	std_result = atoi("    ");
 	printf("Test 8: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 9: Stringa con numero molto grande
+	ft_result = ft_atoi("d469 \n");
+	std_result = atoi("d469 \n");
+	printf("Test 9: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
 
 	return (0);
 }

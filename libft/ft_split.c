@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 14:44:56 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:07:57 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:55:15 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ void	free_split(char **split)
 	free(split);
 }
 
-
+/*
 int main()
 {
 	char **result;
@@ -185,3 +185,4 @@ int main()
 
 	return 0;
 }
+*/

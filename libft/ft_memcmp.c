@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:24:09 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/22 17:47:10 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:54:47 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t length)
 	return (0);
 }
 
+/*
 int main()
 {
     printf("==== TEST MEMCMP ====\n");
@@ -89,3 +90,4 @@ int main()
     return 0;
 }
 
+*/

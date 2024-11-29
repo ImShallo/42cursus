@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 18:46:36 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/19 18:53:01 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:54:56 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	*ft_memset(void *src, int c, size_t length)
 	return ptr;
 }
 
+/*
 int main()
 {
 	char str[] = "";
@@ -39,3 +40,4 @@ int main()
 	printf("%s\n", str2);
 	return 0;
 }
+*/

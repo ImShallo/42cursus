@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:18:46 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/25 18:55:00 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:56:00 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (last);
 }
 
+/*
 int main()
 {
 	char str[] = "Hello World";
@@ -42,3 +43,4 @@ int main()
 		printf("Character not found\n");
 	return 0;
 }
+*/

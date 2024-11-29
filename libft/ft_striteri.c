@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 20:16:22 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/25 17:42:54 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:55:24 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	func(unsigned int numb, char *c)
 	c = c + numb;
 }
 
+/*
 int main(void)
 {
 	char *str = "ciao";
@@ -42,3 +43,4 @@ int main(void)
 	printf("%s\n", str);
 	return (0);
 }
+*/

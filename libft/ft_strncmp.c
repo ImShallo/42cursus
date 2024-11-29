@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 17:19:24 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/25 18:54:28 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:55:52 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t length)
 	return (0);
 }
 
+/*
 int main()
 {
     char str1[] = "CiaoA!";
@@ -44,3 +45,4 @@ int main()
 
     return 0;
 }
+*/

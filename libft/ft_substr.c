@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 21:37:37 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/23 15:07:51 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:56:07 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
+/*
 int main()
 {
 	char *ft_result;
@@ -78,3 +79,4 @@ int main()
 
 	return 0;
 }
+*/

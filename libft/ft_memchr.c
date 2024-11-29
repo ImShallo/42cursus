@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 16:43:13 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/22 17:41:06 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:54:40 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	*ft_memchr(const void *src, int c, size_t length)
 	return (NULL);
 }
 
+/*
 int main(void)
 {
     printf("==== TEST MEMCHR ====\n");
@@ -80,3 +81,4 @@ int main(void)
 
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:52:52 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/23 15:56:17 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:55:05 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_putnbr(int nb, int fd)
 	}
 }
 
+/*
 int	main(void)
 {
 	ft_putnbr(42, 1);
@@ -56,3 +57,4 @@ int	main(void)
 
 	return (0);
 }
+*/

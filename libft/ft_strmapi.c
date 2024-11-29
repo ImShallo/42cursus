@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 20:16:22 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/25 17:36:06 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:55:46 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,11 @@ static char	func(unsigned int numb, char c)
 	return (k);
 }
 
+/*
 int main(void)
 {
 	printf("%s\n", ft_strmapi("ciao", func));
 
 	return (0);
 }
+*/

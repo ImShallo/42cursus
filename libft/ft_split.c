@@ -6,110 +6,107 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 14:44:56 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 12:20:12 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 19:08:34 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
 
-static unsigned int	ft_count_words(char const *s, char c);
-char				**ft_word_alloc(char **matrix, char *s, char c);
+static unsigned int ft_count_words(char const *s, char c);
+char **ft_word_alloc(char **matrix, char const *s, char c);
+char *ft_strndup(const char *s, size_t n);
 
-char	**ft_split(char const *s, char c)
-{
-	int		total_words;
-	char	**matrix;
-
-	if (!s)
-		return (NULL);
-	total_words = ft_count_words(s, c);
-	matrix = (char **) malloc(sizeof(char *) * (total_words + 1));
-	if (!matrix)
-		return (NULL);
-	matrix[total_words] = NULL;
-	if (total_words != 0)
-		ft_word_alloc(matrix, (char *)s, c);
-	return (matrix);
+char *ft_strndup(const char *s, size_t n) {
+    size_t len = 0;
+    while (s[len] && len < n) {
+        len++;
+    }
+    char *dup = (char *)malloc(len + 1);
+    if (!dup) {
+        return NULL;
+    }
+    for (size_t i = 0; i < len; i++) {
+        dup[i] = s[i];
+    }
+    dup[len] = '\0';
+    return dup;
 }
 
-static unsigned int	ft_count_words(char const *s, char c)
-{
-	unsigned int	i;
-	unsigned int	count;
+char **ft_split(char const *s, char c) {
+    int total_words;
+    char **matrix;
 
-	i = 0;
-	count = 0;
-	if (s[i] != c && ft_isprint(s[i]))
-		count++;
-	while (s[i])
-	{
-		if (s[i] == c && s[i + 1] != c && ft_isprint(s[i + 1]))
-			count++;
-		i++;
-	}
-	return (count);
+    if (!s)
+        return NULL;
+    total_words = ft_count_words(s, c);
+    matrix = (char **)calloc(total_words + 1, sizeof(char *));
+    if (!matrix)
+        return NULL;
+    if (total_words != 0 && !ft_word_alloc(matrix, s, c)) {
+        free(matrix);
+        return NULL;
+    }
+    return matrix;
 }
 
-char	**ft_word_alloc(char **matrix, char *s, char c)
-{
-	int	i;
-	int	len;
+static unsigned int ft_count_words(char const *s, char c) {
+    unsigned int i = 0;
+    unsigned int count = 0;
 
-	i = 0;
-	len = 0;
-	while (*s)
-	{
-		while (*s != c && ft_isprint(*s))
-		{
-			len++;
-			s++;
-		}
-		if (len != 0)
-		{
-			*(matrix) = (char *) malloc(sizeof(char) * len + 1);
-			if (!*matrix)
-				return (NULL);
-			ft_strlcpy(*matrix++, (s - len), len + 1);
-			len = 0;
-		}
-		s++;
-	}
-	return (matrix);
+    while (s[i]) {
+        if (s[i] != c && (i == 0 || s[i - 1] == c))
+            count++;
+        i++;
+    }
+    return count;
 }
 
-void	print_split(char **matrix)
-{
-	int	i;
-	int	j;
+char **ft_word_alloc(char **matrix, char const *s, char c) {
+    char const *start;
+    int len = 0;
 
-	i = 0;
-	while (matrix[i] != NULL)
-	{
-		j = 0;
-		while (matrix[i][j] != '\0')
-		{
-			printf("%c", matrix[i][j]);
-			j++;
-		}
-		printf("\n");
-		i++;
-	}
+    while (*s) {
+        if (*s != c) {
+            if (len == 0)
+                start = s;
+            len++;
+        } else if (len > 0) {
+            *matrix = ft_strndup(start, len);
+            if (!*matrix)
+                return NULL;
+            matrix++;
+            len = 0;
+        }
+        s++;
+    }
+    if (len > 0)
+        *matrix = ft_strndup(start, len);
+    return matrix;
 }
 
-void	free_split(char **split)
-{
-	int	i;
-
-	i = 0;
-	while (split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
+void print_split(char **matrix) {
+    if (!matrix) {
+        printf("(NULL)\n");
+        return;
+    }
+    while (*matrix) {
+        printf("%s\n", *matrix);
+        matrix++;
+    }
 }
 
-/*
+void free_split(char **split) {
+    char **temp = split;
+    while (*temp) {
+        free(*temp);
+        temp++;
+    }
+    free(split);
+}
+
 int main()
 {
 	char **result;
@@ -165,4 +162,3 @@ int main()
 
 	return 0;
 }
-*/

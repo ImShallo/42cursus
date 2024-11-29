@@ -6,9 +6,12 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:45:30 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/27 16:58:05 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:15:08 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <ctype.h>
 #include <stdio.h>
@@ -38,7 +41,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
-char 	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void	*ft_calloc(size_t count, size_t size);
@@ -51,4 +54,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr(int nb, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void 	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+#endif

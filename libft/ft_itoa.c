@@ -6,45 +6,12 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 21:13:55 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/23 15:05:16 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:05:26 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
-	DESCRIPTION
-		<<ft_digits>> counts the number of digits in a number.
-	RETURN VALUES
-		The number of digits in the number.
-*/
-static int	ft_digits(int nbr)
-{
-	int	count;
-
-	count = 0;
-	if (nbr == 0)
-		return (1);
-    while(nbr != 0)
-	{
-        nbr /= 10;
-        count++;
-    }
-	return (count);
-}
-
-static void	stampaarr(char *A)
-{
-	int	i;
-
-	i = 0;
-	while (A[i] != '\0')
-	{
-		printf("A[%i] = '%c'\n", i, A[i]);
-		i++;
-	}
-	printf("A[%i] = '\\%d'\n", i, A[i]);
-}
+static int	ft_digits(int nbr);
+static void	stampaarr(char *A);
 
 /* 
 	DESCRIPTION
@@ -83,6 +50,41 @@ char	*ft_itoa(int nbr)
 		str[0] = '-';
 	return (str);
 }
+
+/*
+	DESCRIPTION
+		<<ft_digits>> counts the number of digits in a number.
+	RETURN VALUES
+		The number of digits in the number.
+*/
+static int	ft_digits(int nbr)
+{
+	int	count;
+
+	count = 0;
+	if (nbr == 0)
+		return (1);
+    while(nbr != 0)
+	{
+        nbr /= 10;
+        count++;
+    }
+	return (count);
+}
+
+static void	stampaarr(char *A)
+{
+	int	i;
+
+	i = 0;
+	while (A[i] != '\0')
+	{
+		printf("A[%i] = '%c'\n", i, A[i]);
+		i++;
+	}
+	printf("A[%i] = '\\%d'\n", i, A[i]);
+}
+
 
 int main()
 {

@@ -6,20 +6,11 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:01:35 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/19 15:48:05 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 11:04:26 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
-// int	main(void)
-// {
-// 	int a = '1';
-// 	printf("fake -> %d\n", ft_isdigit(a));
-// 	printf("real -> %d\n", isdigit(a));
-// }

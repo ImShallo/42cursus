@@ -6,38 +6,37 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 10:01:08 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/25 18:48:56 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 10:52:24 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	is_numeric(char c)
-{
-	return (c >= '0' && c <= '9');
-}
+static int	is_space(char c);
 
-int	is_space(char c)
-{
-	return ((c >= 1 && c <= 32) || c == 127);
-}
-
+/*
+	DESCRIPTION
+		<<ft_atoi>> converts the initial portion of the string pointed to by
+		<<[str]>> to int representation.
+	RETURN VALUES
+		The converted value.
+*/
 int	ft_atoi(char *str)
 {
 	int		number;
-	short	is_minus;
+	bool	is_minus;
 
 	number = 0;
-	is_minus = 0;
+	is_minus = false;
 	while (*str)
 	{
 		if (!is_space(*str))
 		{
 			if (*str == '-')
-				is_minus = 1;
-			if (is_numeric(*str))
+				is_minus = true;
+			if (ft_isdigit(*str))
 				number += *str - '0';
-			if (is_numeric(*(str + 1)))
+			if (ft_isdigit(*(str + 1)))
 				number *= 10;
 			else
 				break ;
@@ -49,23 +48,61 @@ int	ft_atoi(char *str)
 	return (number);
 }
 
-/* // Test main for evaluator
-int	main(int argc, char *argv[])
+static int	is_space(char c)
 {
-	int	i;
+	return ((c >= 7 && c <= 13) || c == 32);
+}
 
-	if (argc == 1)
-		printf("Not enough arguments");
-	else
-	{
-		i = 1;
-		while (i != argc)
-		{
-			printf("str: '%s' \t ft_atoi: %d\n", argv[i], ft_atoi(argv[i]));
-			i++;
-		}
-	}
+/*
+int main()
+{
+	int	ft_result;
+	int	std_result;
+
+	ft_result = 0;
+	std_result = 0;
+	printf("==== TEST FT_ATOI ====\n");
+
+	// Test 1: Stringa con numero positivo
+	ft_result = ft_atoi("12345");
+	std_result = atoi("12345");
+	printf("Test 1: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 2: Stringa con numero negativo
+	ft_result = ft_atoi("-12345");
+	std_result = atoi("-12345");
+	printf("Test 2: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 3: Stringa con spazi
+	ft_result = ft_atoi(" 12345");
+	std_result = atoi(" 12345");
+	printf("Test 3: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 4: Stringa con spazi e segno
+	ft_result = ft_atoi(" -12345");
+	std_result = atoi(" -12345");
+	printf("Test 4: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 5: Stringa con tabulazioni, newline e segno
+	ft_result = ft_atoi("\t\n -12345");
+	std_result = atoi("\t\n -12345");
+	printf("Test 5: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 6: Stringa con caratteri non numerici
+	ft_result = ft_atoi("	12a345");
+	std_result = atoi("	12a345");
+	printf("Test 6: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 7: Stringa vuota
+	ft_result = ft_atoi("");
+	std_result = atoi("");
+	printf("Test 7: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
+
+	// Test 8: Stringa con solo spazi
+	ft_result = ft_atoi("    ");
+	std_result = atoi("    ");
+	printf("Test 8: Expected: '%d' -- Got: '%d'\n", std_result, ft_result);
 
 	return (0);
-} 
- */
+}
+*/

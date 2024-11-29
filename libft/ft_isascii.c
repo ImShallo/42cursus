@@ -6,12 +6,13 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:03:10 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/18 17:15:25 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:32:12 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* 
-	<<ft_isascii> returns non-zero if the when [c] is an ASCII character, zero otherwise
+	<<ft_isascii> returns non-zero if the when [c] 
+	is an ASCII character, zero otherwise
  */
 int	ft_isascii(int c)
 {

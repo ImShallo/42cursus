@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 20:16:22 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:55:24 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:31:29 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 /*
 	DESCRIPTION
-		<<ft_striteri>> applies the function 'f' to each character of the string 's' to
-		create a new string resulting from successive applications of 'f'.
+		<<ft_striteri>> applies the function 'f' to
+		 each character of the string 's' to
+		create a new string resulting from 
+		successive applications of 'f'.
 */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		(*f)(i, &s[i]);
 		i++;

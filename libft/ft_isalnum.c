@@ -6,9 +6,11 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 15:14:04 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:03:44 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:01:39 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 	DESCRIPTION
@@ -16,5 +18,5 @@
 */
 int	ft_isalnum(int c)
 {
-	return (ft_isdigit(c) || ft_isadlpha(c));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

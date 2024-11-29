@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 20:16:22 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:55:46 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:28:53 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 	DESCRIPTION
 		Applies the function 'f' to each character of the string 's' to 
-		create a new string (with malloc(3)) resulting from successive applications of 'f'.
+		create a new string resulting from successive applications of 'f'.
 	RETURN VALUES
 		The string created from the successive applications of 'f'.
 */
@@ -29,20 +29,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str = (char *) malloc(sizeof(char) * ft_strlen((char *) s) + 1);
 	if (!str)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 	{
 		str[i] = (*f)(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
-}
-
-static char	func(unsigned int numb, char c)
-{
-	char k;
-
-	k = c + numb;
-	return (k);
 }
 
 /*

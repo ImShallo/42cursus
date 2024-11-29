@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:52:52 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:55:05 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:23:18 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 /*
 	DESCRIPTION
-		<<ft_putnbr_fd>> writes the integer <<n>> to the given file descriptor <<fd>>.
+		<<ft_putnbr_fd>> writes the integer <<n>> 
+		to the given file descriptor <<fd>>.
 */
 
-void	ft_putnbr(int nb, int fd)
+void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == -2147483648)
 	{
@@ -31,8 +32,8 @@ void	ft_putnbr(int nb, int fd)
 	}
 	if (nb > 9)
 	{
-		ft_putnbr(nb / 10, fd);
-		ft_putnbr(nb % 10, fd);
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
 	else
 	{
@@ -44,9 +45,9 @@ void	ft_putnbr(int nb, int fd)
 /*
 int	main(void)
 {
-	ft_putnbr(42, 1);
+	ft_putnbr_fd(42, 1);
 	printf("\n");
-	ft_putnbr(-42, 1);
+	ft_putnbr_fd(-42, 1);
 	printf("\n");
 	ft_putnbr(0, 1);
 	printf("\n");

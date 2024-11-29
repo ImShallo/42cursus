@@ -6,9 +6,11 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:45:30 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:15:08 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:32:59 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -52,7 +54,7 @@ void	*ft_memset(void *src, int c, size_t length);
 void	ft_bzero(void *s, size_t length);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr(int nb, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 

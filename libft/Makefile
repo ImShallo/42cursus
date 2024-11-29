@@ -6,7 +6,7 @@
 #    By: cstate <cstate@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/29 11:40:04 by cstate            #+#    #+#              #
-#    Updated: 2024/11/29 11:54:13 by cstate           ###   ########.fr        #
+#    Updated: 2024/11/29 12:11:31 by cstate           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,10 @@ clean:
 # Depends on the clean rule
 fclean: clean
 	rm -f $(NAME)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	cc -nostartfiles -shared -o libft.so $(OBJS)
 
 # Rule to rebuild everything from scratch
 # Calls fclean and then all

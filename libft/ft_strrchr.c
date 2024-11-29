@@ -6,19 +6,21 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 19:18:46 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:56:00 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:33:36 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* 
-*	<<ft_strrchr>> function returns a pointer to the last occurrence of the character <[c]> in the string <[s]>.
-*	If the character <[c]> does not appear in the string <[s]>, the function returns a null pointer.
+	<<ft_strrchr>> function returns a pointer to the 
+	last occurrence of the character <[c]> in the string <[s]>.
+	If the character <[c]> does not appear in the string <[s]>,
+	 the function returns a null pointer.
 */
 char	*ft_strrchr(const char *s, int c)
 {
-	char *last;
+	char	*last;
 
 	last = NULL;
 	while (*s != '\0')

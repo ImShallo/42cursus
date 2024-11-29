@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 20:51:37 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/23 15:09:48 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:26:48 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 /*
 	DESCRIPTION
-		<<ft_strdup>> allocates sufficient memory for a copy of the string <<s1>>,
-		does the copy, and returns a pointer to it.
-		The pointer may subsequently be used as an argument to the function <<free>>.
+		<<ft_strdup>> allocates sufficient memory for a copy 
+		of the string <<s1>>, does the copy, and returns a pointer to it.
+		The pointer may subsequently be used as an argument 
+		to the function <<free>>.
 */
 char	*ft_strdup(const char *s1)
 {

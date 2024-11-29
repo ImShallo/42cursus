@@ -6,15 +6,14 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 14:44:56 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:55:15 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:20:12 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int ft_count_words(char const *s, char c);
-static int	ft_word_len(char *s, char c);
-char **ft_word_alloc(char **matrix, char *s, char c);
+static unsigned int	ft_count_words(char const *s, char c);
+char				**ft_word_alloc(char **matrix, char *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -22,7 +21,7 @@ char	**ft_split(char const *s, char c)
 	char	**matrix;
 
 	if (!s)
-    	return (NULL);
+		return (NULL);
 	total_words = ft_count_words(s, c);
 	matrix = (char **) malloc(sizeof(char *) * (total_words + 1));
 	if (!matrix)
@@ -33,10 +32,10 @@ char	**ft_split(char const *s, char c)
 	return (matrix);
 }
 
-static unsigned int ft_count_words(char const *s, char c)
+static unsigned int	ft_count_words(char const *s, char c)
 {
-	int i;
-	unsigned int count;
+	unsigned int	i;
+	unsigned int	count;
 
 	i = 0;
 	count = 0;
@@ -51,7 +50,7 @@ static unsigned int ft_count_words(char const *s, char c)
 	return (count);
 }
 
-char **ft_word_alloc(char **matrix, char *s, char c)
+char	**ft_word_alloc(char **matrix, char *s, char c)
 {
 	int	i;
 	int	len;
@@ -70,7 +69,6 @@ char **ft_word_alloc(char **matrix, char *s, char c)
 			*(matrix) = (char *) malloc(sizeof(char) * len + 1);
 			if (!*matrix)
 				return (NULL);
-			// printf("%s -- len: %d\n", (s - len), len);
 			ft_strlcpy(*matrix++, (s - len), len + 1);
 			len = 0;
 		}
@@ -79,35 +77,16 @@ char **ft_word_alloc(char **matrix, char *s, char c)
 	return (matrix);
 }
 
-static int	ft_word_len(char *s, char c)
-{
-	int i;
-	int len;
-
-	i = 0;
-	len = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
-	{
-		len++;
-		if (s[i++ + 1] == c)
-			break;
-	}
-	s = (s + i + 1);
-	return (len);
-}
-
 void	print_split(char **matrix)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (matrix[i] != NULL)
 	{
 		j = 0;
-		while(matrix[i][j] != '\0')
+		while (matrix[i][j] != '\0')
 		{
 			printf("%c", matrix[i][j]);
 			j++;
@@ -119,8 +98,9 @@ void	print_split(char **matrix)
 
 void	free_split(char **split)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	while (split[i])
 	{
 		free(split[i]);
@@ -138,7 +118,7 @@ int main()
 
 	// Test 1: Stringa con parole separate da un delimitatore
 	result = ft_split("hello world this is a test", ' ');
-	printf("Test 1: Expected: ['hello', 'world', 'this', 'is', 'a', 'test'], Got: ");
+	printf("Test 1: Expected: ['hello', 'world', 'is', 'a', 'test'], Got: ");
 	print_split(result);
 	free_split(result);
 

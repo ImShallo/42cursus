@@ -6,7 +6,7 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:38:44 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/23 15:45:54 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:29:30 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /*
 	DESCRIPTION
-		<<ft_putchar_fd>> writes the character <<c>> to the given file descriptor <<fd>>.
+		<<ft_putchar_fd>> writes the character <<c>> 
+		to the given file descriptor <<fd>>.
 */
 
 void	ft_putchar_fd(char c, int fd)

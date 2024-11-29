@@ -6,14 +6,15 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:43:19 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/20 17:16:58 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:38:47 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-	<<ft_memcpy>> copies <[length]> bytes from memory area <[src]> to memory area <[dst]>.
+	<<ft_memcpy>> copies <[length]> bytes from memory area <[src]> 
+	to memory area <[dst]>.
 	If the two areas overlap, the behavior is undefined.
 */
 void	*ft_memcpy(void *dst, const void *src, size_t length)
@@ -24,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t length)
 
 	ptr_src = (char *) src;
 	ptr_dst = (char *) dst;
-    if (!dst && !src)
+	if (!dst && !src)
 		return (NULL);
 	i = 0;
 	while (i < length)

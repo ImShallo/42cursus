@@ -6,12 +6,13 @@
 /*   By: cstate <cstate@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 21:13:55 by cstate            #+#    #+#             */
-/*   Updated: 2024/11/29 11:05:26 by cstate           ###   ########.fr       */
+/*   Updated: 2024/11/29 12:35:58 by cstate           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int	ft_digits(int nbr);
-static void	stampaarr(char *A);
 
 /* 
 	DESCRIPTION
@@ -35,7 +36,7 @@ char	*ft_itoa(int nbr)
 		str = malloc(sizeof(char) * (digits++ + 2));
 		is_negative = 1;
 	}
-	else 
+	else
 		str = malloc(sizeof(char) * (digits + 1));
 	str[digits - 1] = '\0';
 	while (digits != 0)
@@ -64,14 +65,14 @@ static int	ft_digits(int nbr)
 	count = 0;
 	if (nbr == 0)
 		return (1);
-    while(nbr != 0)
+	while (nbr != 0)
 	{
-        nbr /= 10;
-        count++;
-    }
+		nbr /= 10;
+		count++;
+	}
 	return (count);
 }
-
+/* 
 static void	stampaarr(char *A)
 {
 	int	i;
@@ -83,9 +84,9 @@ static void	stampaarr(char *A)
 		i++;
 	}
 	printf("A[%i] = '\\%d'\n", i, A[i]);
-}
+} */
 
-
+/*
 int main()
 {
 	char *ft_result;
@@ -134,3 +135,4 @@ int main()
 
 	return 0;
 }
+*/
